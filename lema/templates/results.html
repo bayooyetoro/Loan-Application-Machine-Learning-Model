@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+
+        *{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        body {
+            /* background-color: darkblue; */
+            /* color: darkyellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; */
+        }
+
+        .results {
+            /* background-color: darkyellow; */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px darkblue;
+            text-align: center;
+            background: rgb(202, 238, 247);
+            width: 50%;
+            margin: auto;
+            margin-top: 15%;
+            height: 350px
+        }
+
+        .outcome {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            top: 20%;
+            margin:auto;
+            align-items: center;
+
+        }
+
+        .approval {
+            border: 1px solid;
+            border-radius: 20px  ;
+            background: rgb(4, 70, 26);
+            margin-right: 3%;
+            height:100px;
+            h2 {
+                color: white;
+                padding: 20%;
+            }
+        }
+
+        .rejection {
+            border: 1px solid;
+            border-radius: 20px;
+            background: rgb(137, 18, 18);
+            height: 100px;
+            h2 {
+                color: white;
+                padding: 20%;
+            }
+        }
+
+        @media(min-width:702px){
+
+            .results {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px darkblue;
+            text-align: center;
+            background: rgb(202, 238, 247);
+            width: 50%;
+            /* position: absolute; */
+            top: 20%;
+            left: 25%;
+        }
+
+            .outcome {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+            .approval {
+            border: 1px solid;
+            border-radius: 20px  ;
+            background: rgb(4, 70, 26);
+            margin-right: 3%;
+            width: 60%;
+            h2 {
+                color: white;
+                padding: 4px;
+                font-size: 16px;
+            }
+        }
+
+        .rejection {
+            border: 1px solid;
+            border-radius: 20px;
+            background: rgb(137, 18, 18);
+            width: 60%;
+            h2 {
+                color: white;
+                padding: 4px;
+                font-size: 16px;
+            }
+        }
+        }
+        .outcome {
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="results">
+        <h1>Loan Status Result</h1>
+        <div class="outcome">
+            <div class="approval">
+                <h2>Loan Approval</h2>
+                <p class="output">{{ approval_rate }}</p>
+            </div>
+            <div class="rejection">
+                <h2>Loan Refusal</h2>
+                <p class="output">{{ refusal_rate }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
